@@ -1,0 +1,26 @@
+#ititle{
+    text-align: center;
+}
+
+h2 {
+    color:darkgreen;
+}
+
+h3{
+    text-align: center;
+    color: darkblue;
+}
+
+img{
+    border-radius: 15px;
+    visibility: visible;
+    opacity: 0.85;
+}
+
+.container-fluid{
+    overflow: hidden;
+}
+
+flex-row{
+    overflow: hidden;
+}
