@@ -1,0 +1,8 @@
+/* Horizontial Divider */
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    height: 10px
+  }
