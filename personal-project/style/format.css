@@ -1,8 +1,46 @@
 /* Horizontial Divider */
 hr {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    border: none;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    height: 10px
-  }
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*For the skill heading */
+h2 {
+  color:red;
+  width: 100%; 
+  text-align: center; 
+  border-bottom: 1px solid #000; 
+  line-height: 0.1em;
+  margin: 10px 0 20px; 
+} 
+
+h2 span { 
+   background:#fff; 
+   padding:0 10px; 
+}
+
+h1 {
+  overflow: hidden;
+  text-align: center;
+}
+
+h1:before,
+h1:after {
+  background-color: #000;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+
+h1:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+h1:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
