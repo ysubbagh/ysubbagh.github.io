@@ -1,0 +1,168 @@
+/*Background*/
+.myCanvas{
+    background-color: lightblue;
+    height:850px;
+    width: 700px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom:0;
+}
+
+/*Ball*/
+.ball{
+    background-color: red;
+    height:40px;
+    width:40px;
+    border-radius: 50%;
+    position: relative;
+    top: 80px;
+    left: 200px;
+}
+
+/* "Activate" Animations */
+.myCanvas:hover .ball{
+    animation: drop 2.5s forwards;
+}
+.myCanvas:hover .tRamp {
+    animation: tBop 0.3s ease-out 250ms;
+}
+
+.myCanvas:hover .rRamp{
+    animation: rBop 0.3s ease-out 800ms;
+}   
+
+.myCanvas:hover .bRamp{
+    animation: bBop 0.3s ease-out 1500ms;
+}
+
+.myCanvas:hover .cup{
+    animation: growBox 0.3s ease-in-out 2400ms;
+}
+
+/*Top left Ramp*/
+.tRamp{
+    background-color: black;
+    height: 25px;
+    width: 200px;
+    border-radius: 35%;
+    position: absolute;
+    left: 120px;
+    top:250px;
+    transform:rotate(20deg);
+}
+
+/*Right Ramp*/
+.rRamp{
+    background-color: black;
+    height: 25px;
+    width: 200px;
+    border-radius: 35%;
+    position: absolute;
+    right: 170px;
+    top:400px;
+    transform:rotate(-20deg);
+}
+
+/*Bottom left Ramp*/
+.bRamp{
+    background-color: black;
+    height: 25px;
+    width: 200px;
+    border-radius: 35%;
+    position: absolute;
+    left: 120px;
+    bottom:280px;
+    transform:rotate(20deg);
+}
+
+/*Cup*/
+.cup{
+    background-color: goldenrod;
+    height: 90px;
+    width:90px;
+    position: absolute;
+    left:340px;
+    bottom:0;
+}
+
+/*Animations*/
+
+@keyframes drop{
+    12%{
+        transform: translateY(130px);
+
+    }
+    25%{
+        transform: translate(130px, 200px);
+    }
+    40%{
+        transform: translate(172px, 300px);
+    }
+    60%{
+        transform: translate(-70px, 410px);
+    }
+    90%{
+        transform: translate(150px, 470px)
+    }
+    98%{
+        transform: translate(160px, 670px);
+        opacity: 1;
+    }
+    to{
+        transform: translate(160px, 700px);
+        opacity: 0;
+    }
+}
+
+@keyframes tBop{
+    from{
+        height: 25px;
+    }
+    50%{
+        height: 15px;
+    }
+    to{
+        height: 25px;
+    }
+}
+
+@keyframes rBop{
+    from{
+        height: 25px;
+    }
+    50%{
+        height: 15px;
+    }
+    to{
+        height: 25px;
+    }
+}
+
+@keyframes bBop{
+    from{
+        height: 25px;
+    }
+    50%{
+        height: 15px;
+    }
+    to{
+        height: 25px;
+    }
+}
+
+@keyframes growBox{
+    50%{
+        height: 55px;
+    }
+    to{
+        height: 90px;
+        width: 90px;
+    }
+
+}
+ 
+
+
