@@ -1,3 +1,9 @@
+*{
+font-family: brevia, helvetica, sans-serif;
+font-weight: 700;
+font-style: normal;
+}
+
 /* Horizontial Divider */
 hr {
   margin-left: auto;
