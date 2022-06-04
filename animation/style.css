@@ -93,7 +93,6 @@
 @keyframes drop{
     12%{
         transform: translateY(130px);
-
     }
     25%{
         transform: translate(130px, 200px);
