@@ -48,5 +48,7 @@ iframe {
     width: 1400px; /* adjust to your needs */
     max-width: 100%; /* to make it responsive */
     height: 1000px;
-    max-height: none;
+    max-height: 100vh;
   }
+
+
