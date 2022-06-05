@@ -14,6 +14,17 @@
         <script>
             githubEmbed('.element', settings);
         </script>
+        <style>
+            button{
+                border-radius: 12px;
+                height: 50px;
+                width: fit-content + 10px;
+            }
+            button:hover {
+                box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+            }
+            
+        </style>
     </head>
 
     <body>
@@ -96,9 +107,11 @@
                     <button onclick="openPoke()">Animation</button>
                     <button onclick="openPong()">Ping Pong</button>
                     <button onclick="openHorse()">Horse Race</button>
+                    <button onclick="openTrack()">Nintendo: Track and Field</button>
+                    <button onclick="openSPCC()">SPCC Email Automation</button>
                     <!--CSS Animation-->
                     <div id="ani" style="display:none">
-                        <script src="https://gist.github.com/ysubbagh/26e3cd46f992d1439f0e2aaf2060f207.js"></script>
+                        <iframe src="animation/ani.html"></iframe>
                     </div>
                     <!--App Animation-->
                     <div class="pt-3" id="poke" style="display:none">
@@ -113,6 +126,13 @@
                     <div class="pt-3" id="horse" style="display:none">
                         <iframe src="https://yasmines.neocities.org/website/horserace.html" alt="Horse Racing" title="Make a bet!"></iframe>
                     </div> 
+                    <div class="pt-3" id="track" style="display:none">
+                        <iframe src="https://yasmines.neocities.org/website/track&field/100m.html" alt="100m Dash" title="Usain Bolt?"></iframe>
+                    </div> 
+                    <div class="pt-3 pe-5" id="spcc" style="display:none">
+                        <script src="https://gist.github.com/ysubbagh/9c7ed5acafdd4689becb7c21f233f6f7.js"></script>
+                    </div> 
+
                 </div>
             </div>
         </div>
@@ -153,7 +173,7 @@
             }
         }
 
-        //open pong Animation
+        //open horse Animation
         function openHorse() {
             console.log("hi");
             var x = document.getElementById("horse");
@@ -164,6 +184,27 @@
             }
         }
 
+        //open track Animation
+        function openTrack() {
+            console.log("hi");
+            var x = document.getElementById("track");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+            }
+        }
+
+        //open email automation
+        function openSPCC() {
+            console.log("hi");
+            var x = document.getElementById("spcc");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+            }
+        }
     </script>
 
 </html>
