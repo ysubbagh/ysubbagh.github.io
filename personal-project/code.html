@@ -9,6 +9,11 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <link rel="stylesheet" href="https://use.typekit.net/pvh6npz.css">
         <link rel="stylesheet" href="style/sub.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.23.0/polyfill.min.js"></script>
+        <script src="github-embed.min.js"></script>
+        <script>
+            githubEmbed('.element', settings);
+        </script>
     </head>
 
     <body>
@@ -40,7 +45,7 @@
         <!--Split Screen-->
         <div class="d-flex flex-row">
             <!--Left side of screen-->
-            <div class="d-flex flex-column ps-4 pe-2" style="width: 30%">
+            <div class="d-flex flex-column ps-4 pe-2" style="width: 22%">
                 <!--Profiency Levels-->
                 <div class="pl-5 pt-4 pe-3">
                     <h4>Java</h4>
@@ -71,23 +76,94 @@
                 <!--Github link-->
                 <div class="d-flex justify-content-center">
                     <div class="pt-5">
-                        <a href="https://github.com/ysubbagh">
-                            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" class="rounded-circle img-fluid" alt="GitHub Link" title="link to Github account" width="100px" height="auto">
+                        <a id="ex5" href="https://github.com/ysubbagh">
+                            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" class="bg-white rounded-circle img-fluid" alt="GitHub Link" title="link to Github account" width="100px" height="auto">
                         </a>
                     </div>
                 </div>
 
             </div>
             <!--Main part of page-->
-            <div class="d-flex flex-column flex-grow-1">
-                <div class="ps-4 pt-4 text-white">
+            <div class="d-flex flex-column flex-grow-1 ps-2">
+                <!--Header-->
+                <div class=" pt-4 text-white">
                     <h1>Projects</h1>
                 </div>
-
+                <!--Projects-->
+                <div class="">
+                    <!--Buttons-->
+                    <button onclick="openAni()">CSS Animation</button>
+                    <button onclick="openPoke()">Animation</button>
+                    <button onclick="openPong()">Ping Pong</button>
+                    <button onclick="openHorse()">Horse Race</button>
+                    <!--CSS Animation-->
+                    <div id="ani" style="display:none">
+                        <script src="https://gist.github.com/ysubbagh/26e3cd46f992d1439f0e2aaf2060f207.js"></script>
+                    </div>
+                    <!--App Animation-->
+                    <div class="pt-3" id="poke" style="display:none">
+                        <img src="https://yasmines.neocities.org/website/bb01.gif" alt="Pokeball animation" title="Pokebal animation" width="92%" height="auto">
+                    </div> 
+                    <!--Ping Pong-->
+                    <div class="pt-3" id="pong" style="display:none">
+                        <h6 class="pb-2">Code and images created by me.</h6>
+                        <iframe src="https://yasmines.neocities.org/website/ping-pong/pingponggame.html" alt="ping pong made in javascript" title="The computer is beating you?"></iframe>
+                    </div> 
+                    <!--Horse Races-->
+                    <div class="pt-3" id="horse" style="display:none">
+                        <iframe src="https://yasmines.neocities.org/website/horserace.html" alt="Horse Racing" title="Make a bet!"></iframe>
+                    </div> 
+                </div>
             </div>
         </div>
 
 
     </body>
+
+    <script>
+        //open CSS Animation
+        function openAni() {
+            console.log("bye");
+            var x = document.getElementById("ani");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+            }
+        }
+        //open poke Animation
+        function openPoke() {
+            console.log("hi");
+            var x = document.getElementById("poke");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+            }
+        }
+
+        //open pong Animation
+        function openPong() {
+            console.log("hi");
+            var x = document.getElementById("pong");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+            }
+        }
+
+        //open pong Animation
+        function openHorse() {
+            console.log("hi");
+            var x = document.getElementById("horse");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+            }
+        }
+
+    </script>
 
 </html>
