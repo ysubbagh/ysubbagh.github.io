@@ -25,11 +25,11 @@ body {
  -webkit-transition: all 0.5s ease;
  -moz-transition: all 0.5s ease;
  -o-transition: all 0.5s ease;
+ transition: all 0.5s ease;
  
  /*Reflection*/
  -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(.7, transparent), to(rgba(0,0,0,0.1)));
 }
- 
  
 #ex5 img:hover {  
    opacity: 1;
@@ -46,23 +46,25 @@ body {
 /*iFrame dimensions*/
 iframe {
     width: 1400px; /* adjust to your needs */
-    max-width: 100%; /* to make it responsive */
+    max-width: 100vw; /* to make it responsive */
     height: 1000px;
     max-height: 100vh;
   }
 
 
-  /*Center horizontially content*/
-  .container { 
-    height: 85vh;
-    position: relative;
-  }
-  
-  .center {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-  }
+/*Center horizontially + vertically content*/
+.container { 
+height: 85vh;
+position: relative;
+}
+
+
+
+.center {
+margin: 0;
+position: absolute;
+top: 50%;
+left: 50%;
+-ms-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);
+}

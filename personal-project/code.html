@@ -57,7 +57,7 @@
         <!--Split Screen-->
         <div class="d-flex flex-row">
             <!--Left side of screen-->
-            <div class="d-flex flex-column ps-4 pe-2" style="width: 22%">
+            <div class="d-flex flex-column ps-4 pe-2 " style="width: 22%">
                 <!--Profiency Levels-->
                 <div class="pl-5 pt-4 pe-3">
                     <h4>Java</h4>
@@ -86,7 +86,7 @@
                     </div>
                 </div>
                 <!--Github link-->
-                <div class="d-flex flex-column justify-content-center ps-5">
+                <div class="d-flex flex-column justify-content-around flex-grow-1 flex" style="align-items:center;">
                     <div class="pt-4">
                         <a id="ex5" href="https://github.com/ysubbagh">
                             <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" class="bg-white rounded-circle img-fluid" alt="GitHub Link" title="link to Github account" width="100px" height="auto">
@@ -151,66 +151,77 @@
     <script>
         //open CSS Animation
         function openAni() {
-            console.log("bye");
             var x = document.getElementById("ani");
             if (x.style.display === "none") {
-              x.style.display = "block";
+                closeAll();
+                x.style.display = "block";
             } else {
-              x.style.display = "none";
+                x.style.display = "none";
             }
         }
         //open poke Animation
         function openPoke() {
-            console.log("hi");
             var x = document.getElementById("poke");
             if (x.style.display === "none") {
-              x.style.display = "block";
+                closeAll();
+                x.style.display = "block";
             } else {
-              x.style.display = "none";
+                x.style.display = "none";
             }
         }
 
         //open pong Animation
         function openPong() {
-            console.log("hi");
             var x = document.getElementById("pong");
             if (x.style.display === "none") {
-              x.style.display = "block";
+                closeAll();
+                x.style.display = "block";
             } else {
-              x.style.display = "none";
+                x.style.display = "none";
             }
         }
 
         //open horse Animation
         function openHorse() {
-            console.log("hi");
             var x = document.getElementById("horse");
             if (x.style.display === "none") {
-              x.style.display = "block";
+                closeAll();
+                x.style.display = "block";
             } else {
-              x.style.display = "none";
+                x.style.display = "none";
             }
         }
 
         //open track Animation
         function openTrack() {
-            console.log("hi");
             var x = document.getElementById("track");
             if (x.style.display === "none") {
-              x.style.display = "block";
+                closeAll();
+                x.style.display = "block";
             } else {
-              x.style.display = "none";
+                x.style.display = "none";
             }
         }
 
         //open email automation
         function openSPCC() {
-            console.log("hi");
             var x = document.getElementById("spcc");
             if (x.style.display === "none") {
-              x.style.display = "block";
+                closeAll();
+                x.style.display = "block";
             } else {
-              x.style.display = "none";
+                x.style.display = "none";
+            }
+        }
+
+        //check if anything else is open and close it
+        function closeAll(){
+            const items = ["ani", "poke", "pong", "horse", "track", "spcc"];
+            for(let i = 0; i < items.length; i++){
+                var x = document.getElementById(items[i]);
+                if(x.style.display = "block"){
+                    x.style.display = "none";
+                }
             }
         }
     </script>

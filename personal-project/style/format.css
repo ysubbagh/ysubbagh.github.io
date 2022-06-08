@@ -50,3 +50,95 @@ h1:after {
   left: 0.5em;
   margin-right: -50%;
 }
+
+
+/*Scroll Animations*/
+.box{
+  width: 100vw;
+  height: 100%;
+  text-align: center;
+  line-height: 200px;
+  margin: 10em 0;
+  transition: transform 0.5s, opacity 0.5s;
+  font-weight: bold;
+}
+
+.box.bottom{
+  transform: translateY(200px) scaleX(3);
+  opacity: 0;
+}
+
+.box.active{
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/*Down Arrow Animation*/
+.arrow_container {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  margin: 0px auto;
+}
+.chevron {
+  position: absolute;
+  width: 28px;
+  height: 8px;
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: move 3s ease-out infinite;
+}
+.chevron:before,
+.chevron:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: #a7d493;
+}
+ 
+.chevron:before {
+  left: 0;
+  transform: skew(0deg, 30deg);
+}
+ 
+.chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -30deg);
+}
+.chevron:first-child {
+  animation: move 3s ease-out 1s infinite;
+}
+ 
+.chevron:nth-child(2) {
+  animation: move 3s ease-out 2s infinite;
+}
+@keyframes pulse { 
+  to {
+      opacity: 1;
+    }
+}
+@keyframes move {
+  25% {
+    opacity: 1;
+
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  67% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
